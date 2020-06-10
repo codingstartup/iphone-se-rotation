@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  background-color: #131313;
+}
+
+body.loaded {
+  height: 5000px;
+}
+
+#sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+canvas {
+  position: relative;
+  margin-top: -100px;
+}
+
+p.left, p.right {
+  font-size: 28px;
+  color: #fff;
+  font-family: Helvetica;
+  font-weight: bold;
+  position: absolute;
+  top: 45%;
+  opacity: 0;
+}
+
+p.left {
+  left: 50%;
+}
+
+p.right {
+  right: 50%;
+}
+
+#loading {
+  font-size: 28px;
+  font-family: Helvetica;
+  color: #fff;
+  position: absolute;
+  width: 45vw;
+  text-align: center;
+  z-index: 10;
+  font-weight: bold;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2002878/iphone-se.01.png') no-repeat center center;
+  background-size: contain;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -50px;
+  transition: .5s opacity ease-in-out;
+  transition-delay: 2s;
+}
+
+#loading p {
+  margin-top: 40%;
+}
+
+body.loaded #loading {
+  opacity: 0;
+}
